@@ -25,7 +25,19 @@ export class StudentService{
     return this.httpClient.get('https://65a8ca26219bfa37186794f1.mockapi.io/v1/crud_Operations');
   }
 
+  getStudent(studentId: number){
+    return this.httpClient.get(`https://65a8ca26219bfa37186794f1.mockapi.io/v1/crud_Operations/${studentId}`);
+}
+
   saveStudent(inputData: object){
     return this.httpClient.post('https://65a8ca26219bfa37186794f1.mockapi.io/v1/crud_Operations', inputData);
+  }
+
+  updateStudent(inputData: Object, studentId: number){
+    return this.httpClient.put(`https://65a8ca26219bfa37186794f1.mockapi.io/v1/crud_Operations/${studentId}`, inputData);
+  }
+
+  deleteStudentRecord(studentId: number){
+    return this.httpClient.delete(`https://65a8ca26219bfa37186794f1.mockapi.io/v1/crud_Operations/${studentId}`);
   }
 }

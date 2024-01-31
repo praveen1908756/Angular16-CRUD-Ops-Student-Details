@@ -21,4 +21,15 @@ export class ReadComponent {
       this.students = res;
     });
   }
+
+  deleteStudent(event: any, studentId: number){
+    if(confirm("Are you sure you want to delete this record?")){
+      event.target.innerText = "Deleting...";
+
+      this.studentService.deleteStudentRecord(studentId).subscribe((res: any) => {
+        this.getStudentsLists();
+        alert("Record Deleted!!!");
+      })
+    }
+  }
 }

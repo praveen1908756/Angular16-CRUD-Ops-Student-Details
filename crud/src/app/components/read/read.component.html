@@ -31,7 +31,7 @@
                             <td>{{item.grade}}</td>
                             <td>
                                 <a routerLink="/students/{{item.id}}/update" class="btn btn-success flat-start">Edit</a>
-                                <button type="button" class="btn btn-danger float-end">Delete</button>
+                                <button type="button" (click)="deleteStudent($event, item.id)" class="btn btn-danger float-end">Delete</button>
                             </td> 
                         </tr>
                     </tbody>
