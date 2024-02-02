@@ -1,0 +1,40 @@
+<div>
+    <div class="container mt-5">
+        <div class="card">
+            <div class="card-header">
+                <h4>Student Update Record
+                <a routerLink="/" class="btn btn-danger float-end">Back</a>
+                </h4>
+            </div>
+            <div class="card-body">
+                <form (ngSubmit)="updateStudent()">
+                    <div *ngIf="student">
+                        <div class="mb-3">
+                            <label>ID</label>
+                            <input type="number" [(ngModel)]="student.id" name="id" class="form-control" required="required" disabled>
+                        </div>
+                        <div class="mb-3">
+                            <label>Name</label>
+                            <input type="text" [(ngModel)]="student.name" name="name" class="form-control" required="required">
+                        </div>
+                        <div class="mb-3">
+                            <label>Mark1</label>
+                            <input type="number" [(ngModel)]="student.mark1" name="mark1" class="form-control" required="required">
+                        </div>
+                        <div class="mb-3">
+                            <label>Mark2</label>
+                            <input type="number" [(ngModel)]="student.mark2" name="mark2" class="form-control" required="required"> 
+                        </div>
+                        <div class="mb-3">
+                            <label>Mark3</label>
+                            <input type="number" [(ngModel)]="student.mark3" name="mark3" class="form-control" required="required">
+                        </div>
+                        <div class="mb-3">
+                            <button type="submit" class="btn btn-primary">Update</button>
+                        </div>
+                    </div>  
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
